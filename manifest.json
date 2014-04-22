@@ -1,0 +1,27 @@
+﻿{
+	"manifest_version": 2,
+	"name": "SRS Manager",
+	"version": "1.51",
+	"description": "Manages Voyant's SRS",
+	"icons": { "128": "images/icon_128.png" },
+	"permissions": ["http://*.firebaseIO.com/", "https://*.firebaseIO.com/", "https://*.firebase.com/", "https://mandrillapp.com/", "tabs"],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://*.firebaseio.com; object-src 'self' 'unsafe-eval'",
+	"background" : {
+		"scripts": ["loader.js"]
+	},
+	"browser_action": {
+		"default_title": "Voyant SRS Manager",
+		"default_icon": "images/icon_128.png"
+	},
+	"web_accessible_resources": ["index.html"],
+	"url_handlers": {
+		"requirement": {
+		  "title": "View SRS Requirement",
+		  "matches": [
+			"http://yairhaimo.github.io/SRSManager/*"
+		  ]
+		}
+	}
+
+	
+}
